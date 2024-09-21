@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" type="text/css">  
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="leave.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+
+
+    <script >
+      document.addEventListener("DOMContentLoaded", function() {
+        var dropdownButtons = document.querySelectorAll(".dropdown-btn");
+    
+        dropdownButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                var dropdownContent = this.nextElementSibling;
+    
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                    dropdownContent.style.maxHeight = null;
+                } else {
+                    dropdownContent.style.display = "block";
+                    dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+                }
+            });
+        });
+    });
+    
+    </script>
+  </head>
+
+
+  <body>
+ <!-- sidebar area -->
+
+ <nav class="sidebar close mb-4" id="sidebar-area">
+  <header>
+      <div class="image-text">
+          <span class="image"><i class="bi bi-book-fill" ></i></span>
+
+          <div class="text logo-text">
+              <span class="name"> Creative</span>
+              <span class="profession">Team</span>
+          </div>
+      </div>
+
+      <i class="bi bi-chevron-right toggle"></i>
+  </header>
+
+  <div class="menu-bar">
+      <div class="menu">
+
+          <li class="search-box">
+              <input type="text" placeholder="Search...">
+              <button class="btn" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+          </li>
+
+          <ul class="menu-links">
+              <li class="nav-link">
+                  <a href="new.html">
+                      <i class="bi bi-house icon"></i>
+                      <span class="text nav-text">Dashboard</span>
+                  </a>
+              </li>
+
+             
+
+
+
+              
+                <button class="dropdown-btn">
+                  <i class="bi bi-shield-lock  icon" ></i>
+                  <span class="text nav-text">Account</span>
+                </button>
+                  <div class="dropdown-container">
+                    <a href="login.html">Login</a>
+                     <a  href="signup.html">Registration</a>
+                  </div>
+
+
+
+
+
+                  <button class="dropdown-btn">
+                   <i class="bi bi-people icon"  ></i>
+                    <span class="text nav-text">Employee</span>
+                  </button>
+                    <div class="dropdown-container">
+                      <a class="dropdown-item" href="leave.html">Leave </a>
+                      <a class="dropdown-item" href="attendence.html">Attendence</a>
+                      <a class="dropdown-item" href="team.html"> Our Team</a>
+                    </div>
+
+
+
+
+
+                
+
+           
+
+              <li class="nav-link">
+                  <a href="activity.html">
+                      <i class="bi bi-clipboard-check icon"  ></i>
+                      <span class="text nav-text">Activity</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="hr-social.html">
+                      <i class="bi bi-globe2 icon" ></i>
+                      <span class="text nav-text">HR Social</span>
+                  </a>
+              </li>
+
+
+              <button class="dropdown-btn">
+                <i class="bi bi-file-earmark-bar-graph icon"></i>
+                  <span class="text nav-text">Reports</span>
+               </button>
+                 <div class="dropdown-container">
+                  <a class="dropdown-item" href="expence.html">Expence Report</a>
+                  <a class="dropdown-item" href="invoice.html">Invoice Report</a>
+                 </div>
+
+              
+
+
+
+
+
+
+              <li class="nav-link">
+                  <a href="map.html">
+                      <i class="bi bi-geo-alt icon"></i>
+                      <span class="text nav-text">Map</span>
+                  </a>
+              </li>
+
+          </ul>
+      </div>
+
+      <div class="bottom-content mb-4">
+          <li class="">
+              <a href="#">
+                  <i class="bi bi-box-arrow-right icon" ></i>
+                  <span class="text nav-text">Logout</span>
+              </a>
+          </li>
+        </div>
+
+       
+         
+
+      
+  </div>
+
+</nav>
+<!-- end of sidebar -->
+
+
+
+
+    <!-- home content -->
+<section class="home">
+
+<div class="container-fluid"  id="home-section-container">
+
+
+      <nav class="navbar  navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+        
+
+
+          <form class="d-flex search-form" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+            <div class="nav-item-icon">
+              <i class="bi bi-bell-fill" style="font-size: 20px;"></i>
+              <i class="bi bi-envelope" style="font-size: 20px;"></i>
+  
+              <div class="profile-acc">
+                <a class="nav-link " href="profile.html" >
+                    <img class="img-profile rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" height="40px" width="40px">
+                  </a>
+              </div>
+            </div>
+          
+        </div>
+      </nav>
+
+
+    <div class="container-fluid">
+      
+        <div class="row mt-4">
+          
+          
+            <div class="col-lg-12" >
+            
+               
+    
+                  <div class="table-responsive"> 
+                    <div class="attendence-title">
+                      <h3 class="mt-2 ml-4"> Leave Details</h3></div>
+
+                      <div class="search-box-expense">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button type="button" class="btn btn-danger">Search</button>
+                       </div>
+
+                  
+
+
+
+                       <div class="fixTableHead"> 
+                       <table>
+                        <thead>
+                          <tr>
+                            <th>Id</th>
+                            <th>Employee</th>
+                            <th>Estimation-Date</th>
+                            <th>Duration</th>
+                            <th>Permission-Detail</th>
+                            <th>Action</th>
+                          
+                          </tr>
+  
+  
+                        </thead>
+
+                        <tr>
+                          <td>00004</td>
+                          
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p22.jpg" alt="" style="height:40px; width: 60px; ">
+                            Mannu Lutgaya
+                            </div>
+                          </td>
+                          <td>25-29 July</td>
+                          <td>5 Days</td>
+                          <td>Sick Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                     
+                        </tr>
+
+
+                        <tr>
+                          <td>03294</td>
+                          
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p21.jpg" alt="" style="height:40px; width: 60px; ">
+                           Hytau Litam
+                            </div>
+                          </td>
+                          <td>7 May</td>
+                          <td>Full Day</td>
+                          <td>Annual Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                         
+                        </tr>
+
+                        <tr>
+                          <td>07894</td>
+                         
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p20.jpg" alt="" style="height:40px; width: 60px; ">
+                           Muyiy Werti
+                            </div>
+                          </td>
+                          <td>1Jan to 4Jan</td>
+                          <td>4 Days</td>
+                          <td>Maternity Leave</td>
+                          <td><button class="btn btn-outline-danger">Rejected</button></td>
+                         
+                        </tr>
+
+
+                        
+                        <tr>
+                          <td>00004</td>
+                          
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p22.jpg" alt="" style="height:40px; width: 60px; ">
+                            Mannu Lutgaya
+                            </div>
+                          </td>
+                          <td>25-29 July</td>
+                          <td>5 Days</td>
+                          <td>Sick Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                     
+                        </tr>
+
+                        <tr>
+                          <td>00994</td>
+                         
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p19.jpg" alt="" style="height:40px; width: 60px; ">
+                           Himuy Guyti
+                            </div>
+                          </td>
+                          <td>12Aug to 14Aug</td>
+                          <td>3 Days</td>
+                          <td>Vacation Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                          
+                        </tr>
+    
+                        <tr>
+                          <td>08694</td>
+                          
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p18.jpg" alt="" style="height:40px; width: 60px; ">
+                            Aateya Dobay
+                            </div>
+                          </td>
+                          <td>31Dec</td>
+                          <td>Half Day</td>
+                          <td>Half Day Leave</td>
+                          <td><button class="btn btn-outline-danger">Rejected</button></td>
+                         
+                        </tr>
+    
+
+                        
+                        <tr>
+                          <td>00004</td>
+                          
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p22.jpg" alt="" style="height:40px; width: 60px; ">
+                            Mannu Lutgaya
+                            </div>
+                          </td>
+                          <td>25-29 July</td>
+                          <td>5 Days</td>
+                          <td>Sick Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                     
+                        </tr>
+
+                        <tr>
+                          <td>09674</td>
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p17.jpg" alt="" style="height:40px; width: 60px; ">
+                             Teriu Bethei
+                            </div>
+                          </td>
+                          <td>10Oct to 15Oct </td>
+                          <td>5 Days</td>
+                          <td>Maternity Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+
+                        </tr>
+    
+                        <tr>
+                          <td>07894</td>
+                         
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p20.jpg" alt="" style="height:40px; width: 60px; ">
+                           Muyiy Werti
+                            </div>
+                          </td>
+                          <td>1Jan to 4Jan</td>
+                          <td>4 Days</td>
+                          <td>Maternity Leave</td>
+                          <td><button class="btn btn-outline-danger">Rejected</button></td>
+                         
+                        </tr>
+                        <tr>
+                          <td>01674</td>
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p16.jpg" alt="" style="height:40px; width: 60px; ">
+                             Jamal Kudu
+                            </div>
+                          </td>
+                          <td>25Feb</td>
+                          <td>Full Day</td>
+                          <td>Casual Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                          
+                        </tr>
+
+
+                        
+                        <tr>
+                          <td>00004</td>
+                          
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p22.jpg" alt="" style="height:40px; width: 60px; ">
+                            Mannu Lutgaya
+                            </div>
+                          </td>
+                          <td>25-29 July</td>
+                          <td>5 Days</td>
+                          <td>Sick Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                     
+                        </tr>
+
+                        <tr>
+                          <td>07894</td>
+                         
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p20.jpg" alt="" style="height:40px; width: 60px; ">
+                           Muyiy Werti
+                            </div>
+                          </td>
+                          <td>1Jan to 4Jan</td>
+                          <td>4 Days</td>
+                          <td>Maternity Leave</td>
+                          <td><button class="btn btn-outline-danger">Rejected</button></td>
+                         
+                        </tr>
+                        <tr>
+                            <td>01674</td>
+                            <td>
+                              <div class="person-img">
+                                <img src="./i/p16.jpg" alt="" style="height:40px; width: 60px; ">
+                               Jamal Kudu
+                              </div>
+                            </td>
+                            <td>25Feb</td>
+                            <td>Full Day</td>
+                            <td>Casual Leave</td>
+                            <td><button class="btn btn-outline-success">Approved</button></td>
+                            
+                          </tr>
+
+
+                          
+                        <tr>
+                          <td>00004</td>
+                          
+                          <td>
+                            <div class="person-img">
+                              <img src="./i/p22.jpg" alt="" style="height:40px; width: 60px; ">
+                            Mannu Lutgaya
+                            </div>
+                          </td>
+                          <td>25-29 July</td>
+                          <td>5 Days</td>
+                          <td>Sick Leave</td>
+                          <td><button class="btn btn-outline-success">Approved</button></td>
+                     
+                        </tr>
+
+                          <tr>
+                            <td>01784</td>
+                            <td>
+                              <div class="person-img">
+                                <img src="./i/p1.jpg" alt="" style="height:40px; width: 60px; ">
+                                Seram Hauju
+                            
+                            </div>
+                            </td>
+                            <td>4April</td>
+                            <td>Half Day</td>
+                            <td>Half Leave</td>
+                            <td><button class="btn btn-outline-danger">Rejected</button></td>
+                            
+                          </tr>
+                          <tr>
+                            <td>06789</td>
+                            <td>
+                              <div class="person-img">
+                                <img src="./i/p2.jpg" alt="" style="height:40px; width: 60px; ">
+                                Jana Numer
+                              </div>
+                            </td>
+                            <td>25Dec to 27Dec</td>
+                            <td>3 Day</td>
+                            <td>Maternity Leave</td>
+                            <td><button class="btn btn-outline-success">Approved</button></td>
+                            
+                          </tr>
+                          <tr>
+                            <td>06104</td>
+                            <td>
+                              <div class="person-img">
+                                <img src="./i/p3.jpg" alt="" style="height:40px; width: 60px; ">
+                                Junnem Shara
+                              </div>
+                            </td>
+                            <td>9June to 11Jun</td>
+                            <td>3 Day</td>
+                            <td>Casual Leave</td>
+                            <td><button class="btn btn-outline-danger">Rejected</button></td>
+                            
+                          </tr>
+
+
+  
+                      </table>
+                     </div>
+
+
+
+                 
+                 
+                   <div class="table-pagination">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                   </div>
+              </div> 
+    
+    
+    
+    
+    
+    
+            </div>
+    
+    
+        
+    
+    
+    
+          </div>
+
+          
+          <div class="row mt-4">
+            <div class="footer">
+              <p> Copyright ©2012-2021CreativeTeam,Inc.All rights reserved </p>
+            </div>
+           </div>
+        </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="side.js"></script>
+<script src="leave-chart.js"></script>
+
+<script src="chart1.js"></script>
+
+<script src="chart2.js"></script>
+
+  </body>
+  </html>

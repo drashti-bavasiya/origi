@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" type="text/css">  
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="activity.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script >
+      document.addEventListener("DOMContentLoaded", function() {
+        var dropdownButtons = document.querySelectorAll(".dropdown-btn");
+    
+        dropdownButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                var dropdownContent = this.nextElementSibling;
+    
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                    dropdownContent.style.maxHeight = null;
+                } else {
+                    dropdownContent.style.display = "block";
+                    dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+                }
+            });
+        });
+    });
+    
+    </script>
+
+
+
+
+  </head>
+
+
+  <body>
+<!-- sidebar area -->
+
+<nav class="sidebar close mb-4" id="sidebar-area">
+  <header>
+      <div class="image-text">
+          <span class="image"><i class="bi bi-book-fill" ></i></span>
+
+          <div class="text logo-text">
+              <span class="name"> Creative</span>
+              <span class="profession">Team</span>
+          </div>
+      </div>
+
+      <i class="bi bi-chevron-right toggle"></i>
+  </header>
+
+  <div class="menu-bar">
+      <div class="menu">
+
+          <li class="search-box">
+              <input type="text" placeholder="Search...">
+              <button class="btn" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+          </li>
+
+          <ul class="menu-links">
+              <li class="nav-link">
+                  <a href="new.html">
+                      <i class="bi bi-house icon"></i>
+                      <span class="text nav-text">Dashboard</span>
+                  </a>
+              </li>
+
+             
+
+
+
+              
+                <button class="dropdown-btn">
+                  <i class="bi bi-shield-lock  icon" ></i>
+                  <span class="text nav-text">Account</span>
+                </button>
+                  <div class="dropdown-container">
+                    <a href="login.html">Login</a>
+                     <a  href="signup.html">Registration</a>
+                  </div>
+
+
+
+
+
+                  <button class="dropdown-btn">
+                   <i class="bi bi-people icon"  ></i>
+                    <span class="text nav-text">Employee</span>
+                  </button>
+                    <div class="dropdown-container">
+                      <a class="dropdown-item" href="leave.html">Leave </a>
+                      <a class="dropdown-item" href="attendence.html">Attendence</a>
+                      <a class="dropdown-item" href="team.html"> Our Team</a>
+                    </div>
+
+
+
+
+
+                
+
+           
+
+              <li class="nav-link">
+                  <a href="activity.html">
+                      <i class="bi bi-clipboard-check icon"  ></i>
+                      <span class="text nav-text">Activity</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="hr-social.html">
+                      <i class="bi bi-globe2 icon" ></i>
+                      <span class="text nav-text">HR Social</span>
+                  </a>
+              </li>
+
+
+              <button class="dropdown-btn">
+                <i class="bi bi-file-earmark-bar-graph icon"></i>
+                  <span class="text nav-text">Reports</span>
+               </button>
+                 <div class="dropdown-container">
+                  <a class="dropdown-item" href="expence.html">Expence Report</a>
+                  <a class="dropdown-item" href="invoice.html">Invoice Report</a>
+                 </div>
+
+              
+
+
+
+
+
+
+              <li class="nav-link">
+                  <a href="map.html">
+                      <i class="bi bi-geo-alt icon"></i>
+                      <span class="text nav-text">Map</span>
+                  </a>
+              </li>
+
+          </ul>
+      </div>
+
+      <div class="bottom-content mb-4">
+          <li class="">
+              <a href="#">
+                  <i class="bi bi-box-arrow-right icon" ></i>
+                  <span class="text nav-text">Logout</span>
+              </a>
+          </li>
+        </div>
+
+       
+         
+
+      
+  </div>
+
+</nav>
+<!-- end of sidebar -->
+
+
+
+
+
+    <!-- home content -->
+<section class="home">
+
+<div class="container-fluid">
+
+
+        <nav class="navbar  navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+            
+    
+    
+              <form class="d-flex search-form" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary" type="button">
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
+    
+                <div class="nav-item-icon">
+                  <i class="bi bi-bell-fill" style="font-size: 20px;"></i>
+                  <i class="bi bi-envelope" style="font-size: 20px;"></i>
+      
+                  <div class="profile-acc">
+                    <a class="nav-link " href="profile.html" >
+                        <img class="img-profile rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" height="40px" width="40px">
+                      </a>
+                  </div>
+                </div>
+              
+            </div>
+          </nav>
+    
+
+
+    <div class="container-fluid">
+
+      
+        <div class="row mt-4" >
+          <h3 class="mt-2 ml-4">Activity</h3>
+       
+
+            <div class="col-lg-6"  id="column-timeline">
+                
+                <div class="timeline-area">
+                <h4>Basic Timeline</h4>
+
+                <div class="timeline p-4 block mb-4">
+                    <div class="tl-item active">
+                        <div class="tl-dot b-warning"></div>
+                        <div class="tl-content">
+                            <div>Just Now</div>
+                            <div class="">@twitter thanks for you appreciation thanks.</div>
+                            <div class="tl-date text-muted mt-1">13 june 18</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot b-primary"></div>
+                        <div class="tl-content">
+                            <div class="">Do you know how Google search works.</div>
+                            <div class="tl-date  mt-1">45 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot b-danger"></div>
+                        <div class="tl-content">
+                            <div class="">Thanks to @apple, for new poject</div>
+                            <div class="tl-date text-muted mt-1">1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot b-danger"></div>
+                        <div class="tl-content">
+                            <div class="">Order placed @ebayji for project you will get your products</div>
+                            <div class="tl-date text-muted mt-1">1 Week ago</div>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot b-warning"></div>
+                        <div class="tl-content">
+                            <div class="">Learn how to use <a href="#" data-abc="true">Google Analytics</a> to discover info.</div>
+                            <div class="tl-date text-muted mt-1">3 days ago</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            
+            </div>
+    
+            <div class="col-lg-6 "  id="column-timeline">
+    
+              <div class="activity-chart-box">          
+                  <div class="timeline-chart">
+                    <div id="myTimelineChart"></div>
+    
+                </div>
+              </div>  
+            </div>
+    
+    
+        </div>
+    
+    
+        <div class="row mt-4">
+            <div class="col-lg-7">
+    
+                <div class="calender">
+                    <div class="month-week">
+                        <h4>October</h4>
+                        <div class="m-w">
+                          
+                            <span>Add New Event</span>
+                        </div>
+                    </div>
+                
+                    <div class="weeks">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Web</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+                
+                    <div class="days">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                    </div>
+                
+                    <div class="days">
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                        <span>11</span>
+                        <span>12</span>
+                        <span>13</span>
+                        <span>14</span>
+                    </div>
+                
+                    <div class="days">
+                        <span>15</span>
+                        <span>16</span>
+                        <span>17</span>
+                        <span>18</span>
+                        <span>19</span>
+                        <span>20</span>
+                        <span>21</span>
+                    </div>
+                
+                
+                    <div class="days">
+                        <span>22</span>
+                        <span>23</span>
+                        <span>24</span>
+                        <span>25</span>
+                        <span>26</span>
+                        <span>27</span>
+                        <span>28</span>
+                    </div>
+                
+                    <div class="days">
+                        <span>29</span>
+                        <span>30</span>
+                        <span>31</span>
+                        <span class="next-month">1</span>
+                        <span class="next-month">2</span>
+                        <span class="next-month">3</span>
+                        <span class="next-month">4</span>
+                    </div>
+    
+    
+                </div>
+                  
+            </div>
+
+           
+            <div class="col-lg-5" >
+
+
+              <div class="event">
+
+                <div class="event-box">
+                  <div class="add-event-btn">
+                    <button type="button" class="btn btn-outline-dark ">Add New Event</button>
+                   </div>
+                   </div>
+              
+                   <div class="event-content">
+                    <div class="event-image">
+                      <img src="./i/p8.jpg" alt="" id="event-image-style" style="width: 400px; height: 250px; border-radius: 20px;">
+                    </div>
+
+
+
+                     <div class="event-name">Alizee Thomas</div>
+                      <div class="event-city">Washington, d.c.</div>
+                   </div>
+
+                  <hr>
+
+                  <div class="event-task" >
+                   
+                    <div class="completed-task">
+                      <h5>18</h5>
+                      <p>completed</p>
+                    </div>
+                    <div class="todo-task">
+                      <h5>34</h5>
+                      <p>To Do Task</p>
+                    </div>
+                    <div class="all-task">
+                      <h5>78</h5>
+                      <p>All Task</p>
+                    </div>
+                  </div>
+
+
+                  <div class="task-button">
+                    <button type="button" class="btn btn-outline-primary">Marketing</button>
+                    <button type="button" class="btn btn-outline-secondary">Design</button>
+                    <button type="button" class="btn btn-outline-success">Development</button>
+                    <button type="button" class="btn btn-outline-danger">Finance</button>
+                    <button type="button" class="btn btn-outline-warning">Meeting</button>
+                    <button type="button" class="btn btn-outline-info">Conference</button>
+                  </div>
+
+
+                 
+
+
+
+
+
+
+
+                  </div>
+
+             
+                 
+               
+            </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="footer">
+            <p> Copyright ©2012-2021CreativeTeam,Inc.All rights reserved </p>
+          </div>
+         </div>
+         
+        </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+      </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="side.js"></script>
+<script src="timeline-chart.js"></script>
+
+<script src="chart1.js"></script>
+
+<script src="chart2.js"></script>
+
+  </body>
+  </html>

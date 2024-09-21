@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" type="text/css">  
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="hr-social.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+
+    <script >
+      document.addEventListener("DOMContentLoaded", function() {
+        var dropdownButtons = document.querySelectorAll(".dropdown-btn");
+    
+        dropdownButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                var dropdownContent = this.nextElementSibling;
+    
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                    dropdownContent.style.maxHeight = null;
+                } else {
+                    dropdownContent.style.display = "block";
+                    dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+                }
+            });
+        });
+    });
+    
+    </script>
+
+  </head>
+
+
+  <body>
+<!-- sidebar area -->
+
+<nav class="sidebar close mb-4" id="sidebar-area">
+  <header>
+      <div class="image-text">
+          <span class="image"><i class="bi bi-book-fill" ></i></span>
+
+          <div class="text logo-text">
+              <span class="name"> Creative</span>
+              <span class="profession">Team</span>
+          </div>
+      </div>
+
+      <i class="bi bi-chevron-right toggle"></i>
+  </header>
+
+  <div class="menu-bar">
+      <div class="menu">
+
+          <li class="search-box">
+              <input type="text" placeholder="Search...">
+              <button class="btn" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+          </li>
+
+          <ul class="menu-links">
+              <li class="nav-link">
+                  <a href="new.html">
+                      <i class="bi bi-house icon"></i>
+                      <span class="text nav-text">Dashboard</span>
+                  </a>
+              </li>
+
+             
+
+
+
+              
+                <button class="dropdown-btn">
+                  <i class="bi bi-shield-lock  icon" ></i>
+                  <span class="text nav-text">Account</span>
+                </button>
+                  <div class="dropdown-container">
+                    <a href="login.html">Login</a>
+                     <a  href="signup.html">Registration</a>
+                  </div>
+
+
+
+
+
+                  <button class="dropdown-btn">
+                   <i class="bi bi-people icon"  ></i>
+                    <span class="text nav-text">Employee</span>
+                  </button>
+                    <div class="dropdown-container">
+                      <a class="dropdown-item" href="leave.html">Leave </a>
+                      <a class="dropdown-item" href="attendence.html">Attendence</a>
+                      <a class="dropdown-item" href="team.html"> Our Team</a>
+                    </div>
+
+
+
+
+
+                
+
+           
+
+              <li class="nav-link">
+                  <a href="activity.html">
+                      <i class="bi bi-clipboard-check icon"  ></i>
+                      <span class="text nav-text">Activity</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="hr-social.html">
+                      <i class="bi bi-globe2 icon" ></i>
+                      <span class="text nav-text">HR Social</span>
+                  </a>
+              </li>
+
+
+              <button class="dropdown-btn">
+                <i class="bi bi-file-earmark-bar-graph icon"></i>
+                  <span class="text nav-text">Reports</span>
+               </button>
+                 <div class="dropdown-container">
+                  <a class="dropdown-item" href="expence.html">Expence Report</a>
+                  <a class="dropdown-item" href="invoice.html">Invoice Report</a>
+                 </div>
+
+              
+
+
+
+
+
+
+              <li class="nav-link">
+                  <a href="map.html">
+                      <i class="bi bi-geo-alt icon"></i>
+                      <span class="text nav-text">Map</span>
+                  </a>
+              </li>
+
+          </ul>
+      </div>
+
+      <div class="bottom-content mb-4">
+          <li class="">
+              <a href="#">
+                  <i class="bi bi-box-arrow-right icon" ></i>
+                  <span class="text nav-text">Logout</span>
+              </a>
+          </li>
+        </div>
+
+       
+         
+
+      
+  </div>
+
+</nav>
+<!-- end of sidebar -->
+
+
+
+
+
+    <!-- home content -->
+<section class="home">
+
+<div class="container-fluid" id="home-section-container">
+
+
+      <nav class="navbar   navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+        
+
+
+          <form class="d-flex search-form" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+            <div class="nav-item-icon">
+              <i class="bi bi-bell-fill" style="font-size: 20px;"></i>
+              <i class="bi bi-envelope" style="font-size: 20px;"></i>
+  
+              <div class="profile-acc">
+                <a class="nav-link " href="profile.html" >
+                    <img class="img-profile rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" height="40px" width="40px">
+                  </a>
+              </div>
+            </div>
+          
+        </div>
+      </nav>
+
+
+    <div class="container-fluid">
+      
+
+      <h3 class="mt-2 ml-4">HR Social</h3>
+        <div class="row mt-4" style="background-color: white;"> 
+        
+          
+
+            <div class="col-lg-2 col-md-4 col-sm-4" >
+               <div class="box">
+                  <i class="bi bi-linkedin" style="font-size: 30px;" id="box-icon"></i>
+                  <h4>Followers</h4>
+                  <h6>3456</h6>
+               </div>
+            </div>
+      
+            <div class="col-lg-2 col-md-4 col-sm-4">
+              <div class="box">
+                <i class="bi bi-instagram" style="font-size: 30px;" id="box-icon1"></i>
+                <h4>Followers</h4>
+                <h6>231</h6>
+               </div>
+            </div>
+      
+            <div class="col-lg-2 col-md-4 col-sm-4">
+              <div class="box">
+                <i class="bi bi-twitter" style="font-size: 30px;" id="box-icon"></i>
+                <h4>Followers</h4>
+                <h6>231</h6>
+               </div>
+            </div>
+      
+            <div class="col-lg-2 col-md-4 col-sm-4">
+              <div class="box">
+                <i class="bi bi-facebook" style="font-size: 30px;" id="box-icon"></i>
+                <h4>Like</h4>
+                <h6>126</h6>
+               </div>
+            </div>
+      
+            <div class="col-lg-2 col-md-4 col-sm-4">
+              <div class="box">
+                <i class="bi bi-google" style="font-size: 30px;" id="box-icon1"></i>
+                <h4>Like</h4>
+                <h6>290</h6>
+               </div>
+            </div>
+      
+            <div class="col-lg-2 col-md-4 col-sm-4">
+              <div class="box">
+                <i class="bi bi-globe2" style="font-size: 30px;" id="box-icon"></i>
+                <h4>Web</h4>
+                <h6>121</h6>
+               </div>
+            </div>
+         
+        </div>  
+        
+               <div class="row mt-4">
+                  <div class="col-lg-12" style="background-color: white;">
+                   
+                     <div class="socialchart-box">
+                      <h4>Social Statistics
+                      </h4>
+                      <div id="mySocialChart"></div>
+                     </div>
+                  </div>
+               </div>
+      
+      
+               <div class="row mt-4">
+                <div class="col-lg-12">
+      
+                  <div class="social-table">
+                    <h4>Social Media</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+      
+                        <tr>
+                        <th>Media</th>
+                        <th>Name</th>
+                        <th>Like</th>
+                        <th>Comment</th>
+                        <th>Share</th>
+                        <th>Member</th>
+                        </tr>
+      
+                         <tr><td>
+                          <i class="bi bi-linkedin" style="font-size: 30px;" id="box-icon"></i>
+                         </td>
+                          <td>LINKED IN</td>
+                          <td >19K</td>
+                          <td >14K</td>
+                          <td >14K</td>
+                          <td><button type="button" class="btn btn-outline-success">2341</button></td>
+                        </tr>
+      
+                          <tr><td>
+                            <i class="bi bi-instagram" style="font-size: 30px;" id="box-icon1"></i>
+                           </td>
+                          <td>INSTRAGRAM</td>
+                          <td >9K</td>
+                          <td >11K</td>
+                          <td >10K</td>
+                          <td><button type="button" class="btn btn-outline-success">953</button></td>
+                        </tr>
+      
+                          <tr><td>
+                            <i class="bi bi-twitter" style="font-size: 30px;" id="box-icon"></i>
+                          </td>
+                          <td>TWITTER</td>
+                          <td >10K</td>
+                          <td >18K</td>
+                          <td >21K</td>
+                          <td><button type="button" class="btn btn-outline-success">1001</button></td>
+                        </tr>
+      
+                          <tr><td>
+                            <i class="bi bi-facebook" style="font-size: 30px;" id="box-icon"></i>
+                          </td>
+                          <td>FACEBOOK</td>
+                          <td >15K</td>
+                          <td >18K</td>
+                          <td >8K</td>
+                          <td><button type="button" class="btn btn-outline-success">543</button></td>
+                        </tr>
+      
+                          <tr><td>
+                            <i class="bi bi-google" style="font-size: 30px;" id="box-icon1"></i>
+                          </td>
+                          <td>GOOGLE	</td>
+                          <td >15K</td>
+                          <td >18K</td>
+                          <td >54K</td>
+                          <td><button type="button" class="btn btn-outline-success">150</button></td>
+                        </tr>
+      
+                          
+      
+      
+                      </tbody>
+                   </table>
+              </div>
+            </div>
+      
+                </div>
+               </div>
+      
+
+               <div class="row mt-4">
+                <div class="footer">
+                  <p> Copyright ©2012-2021CreativeTeam,Inc.All rights reserved </p>
+                </div>
+               </div>
+
+        </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="side.js"></script>
+<script src="hr-chart.js"></script>
+
+<script src="chart1.js"></script>
+
+<script src="chart2.js"></script>
+
+  </body>
+  </html>
